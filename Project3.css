@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@600&family=Kanit:wght@300&family=Titan+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+header::before {
+    content: '';
+    background: url('Shiva.webp') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* NAVBAR */
+#navbar {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* Image */
+#image {
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+#image img {
+    margin-left: 20px;
+    height: 9vh;
+    cursor: pointer;
+}
+
+/* List */
+#navigation {
+    width: 400px;
+}
+
+#list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#list li {
+    font-size: 20px;
+}
+
+#list a {
+    color: white;
+    text-decoration: none;
+}
+#list a:hover{
+    border-bottom: 1px solid white
+}
+
+/* Button */
+#button {
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border: 2px solid white;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* HOME */
+#home{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+#container1{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10rem;
+    grid-row-gap: 2rem ;
+}
+#container1 a{
+    text-decoration: none;
+    color: white ;
+}
+.item{
+    font-family: 'Baloo Bhaina 2', cursive;
+    background-color: rgba(0, 0, 0,0.3);
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.2s;
+}
+.item:hover{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+@media only screen and (max-width:1030px){
+    header::before{
+        height: 130vh;
+    }
+    #home{
+        height: 120vh;
+    }
+}
+@media only screen and (max-width:950px){
+    header::before{
+        height: 200vh;
+    }
+    #container1{
+        grid-template-columns: auto auto;
+        grid-column-gap: 2rem;
+        grid-row-gap: 4rem;
+    }
+    #home{
+        height: 170vh;
+    }
+    .item{
+        font-size: 25px;
+    }
+    #navbar{
+        flex-direction: column;
+        height: 25vh;
+    }
+    #image{
+        justify-content: center;
+    }
+    #image img{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width:600px){
+    header::before{
+        display: none;
+    }
+    #container1{
+        grid-template-columns: auto;
+        grid-column-gap: 2rem;
+    }
+    #navbar{
+        flex-direction: column;
+        height: 25vh;
+        margin-bottom: 50px;
+    }
+}
+@media only screen and (max-width:400px){
+    #list{
+        flex-direction: column;
+        align-items: center;
+    }
+    #navbar{
+        height: 35vh;
+    }
+}
